@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+  
+.box{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    animation: rotateCube 5s infinite linear;
+}
+  
+.box1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; 
+}
+  
+.card{
+     transform: translateZ(100px);
+     background-color: yellowgreen; 
+}
+
+.card1{
+    transform: rotateY(180deg) translateZ(100px); 
+    background-color: beige;
+}
+
+.card2{
+    transform: rotateY(-90deg) translateZ(100px); 
+    background-color: blue;
+}
+
+.card3{ 
+    transform: rotateY(90deg) translateZ(100px); 
+    background-color: brown;
+}
+
+.card4{ 
+    transform: rotateX(90deg) translateZ(100px); 
+    background-color: cyan;
+}
+
+.card5{ 
+    transform: rotateX(-90deg) translateZ(100px); 
+    background-color: blueviolet;
+}
+
+  
+@keyframes rotateCube {
+    0% {
+         transform: rotateX(0) rotateY(0);
+        }
+
+    100% {
+         transform: rotateX(360deg) rotateY(360deg); 
+        }
+}
